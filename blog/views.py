@@ -1,21 +1,7 @@
 from django.shortcuts import render
+from .models import Post
 
 # Create your views here.
-
-posts = [
-    {
-        'author': 'Mario',
-        'title': 'Naslov 1. bloga',
-        'content': 'Tekst bloga',
-        'date_posted': 'Listopad 17, 2018'
-    },
-    {
-        'author': 'Marija',
-        'title': 'Naslov 2. bloga',
-        'content': 'Tekst bloga',
-        'date_posted': 'Listopad 18, 2018'
-    }
-]
 
 def home(request):
     '''
@@ -24,7 +10,7 @@ def home(request):
     :return: vraća render template stranice koju želim, prvi argument je obavezno request, a drugi je ruta do template-a
     '''
     context = {
-        'posts': posts
+        'posts': Post.objects.all()     # query koji dohvaća podatke iz baze
     }
     return render(request, 'blog/home.html', context)
 

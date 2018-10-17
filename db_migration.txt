@@ -5,5 +5,42 @@ migrate
 createsuperuser
 
 admin, probna@adresa.com, proba
+testnikorisnik, testna@adresa.com, proba12345
 
-#TODO: https://youtu.be/1PkNiYlkkjo?t=391
+provjera sql-a za potrebe debugiranja
+prokrenem: makemigrations zapamtim na kojoj aplikaciji radim promjenu i koji je broj promjene, u ovom slučaju je to: sqlmigrate blog 0001
+
+Za querye po bazi korstim naredbu: shell
+pa onda u nju importam sve potrebno:
+from blog.models import Post
+from django.contrib.auth.models import User
+i radim upit: User.objects.all()
+User.objects.first()
+User.objects.filter(username='admin').first()
+
+spremanje u varijablu: user = User.objects.filter(username='admin').first()
+i onda po njemu notacijom mogu doći do određenog polja: user.id
+
+Drugi način dohvata podatke je klasićna get metoda: user = User.objects.get(id=1)
+
+Provjera što je zapisano u Post modelu: Post.objects.all()
+
+kreiranje redaka u tablici kroz query:
+post_1 = Post(title='Blog 1', content='First post content', author=user)
+post_1.save()
+Post.objects.all()
+
+ili
+post_2 = Post(title='Blog 2', content='Second post content', author_id=user.id)
+
+Pristup do polja u bazi ide ovako
+Spremim u varijablu i na njoj mogu . notacijom pristupati poljima:
+post = Post.objects.first()     Uzimam prvi post
+post.content                    Dolazim do content-a
+post.author.email               Još dublje idem samo dalje sa .-om
+
+Dohvat svih postova o jednom useru:
+user.post_set.all()             _set
+
+Mogu ovako i kreirati red u tablici:
+user.post_set.create(title='Blog 3', content='Third post')

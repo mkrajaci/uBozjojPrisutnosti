@@ -43,7 +43,14 @@
         </header>
         <main role="main" class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8">      <!-- sve poruke će se na ovom mjestu pokazivati -->
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">    <!-- porukama se može dinamički mijenjati stil pomoću ovog message.tag jer ih bootstrap ima predefinirane -->
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
                     {% block content %}{% endblock %}
                 </div>
                 <div class="col-md-4">

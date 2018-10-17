@@ -1,0 +1,9 @@
+python manage.py
+makemigrations
+migrate
+
+createsuperuser
+
+admin, probna@adresa.com, proba
+
+#TODO: https://youtu.be/1PkNiYlkkjo?t=391

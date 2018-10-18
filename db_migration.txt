@@ -7,6 +7,8 @@ createsuperuser
 admin, probna@adresa.com, proba
 testnikorisnik, testna@adresa.com, proba12345
 novikorisnik, , testnalozinka
+testnikorisnik3, testna3@adresa.com, proba12345
+
 
 provjera sql-a za potrebe debugiranja
 prokrenem: makemigrations zapamtim na kojoj aplikaciji radim promjenu i koji je broj promjene, u ovom slučaju je to: sqlmigrate blog 0001

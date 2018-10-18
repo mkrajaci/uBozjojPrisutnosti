@@ -1,1 +1,4 @@
-#TODO: https://youtu.be/3aVqWaLjqS4?t=1008
+#TODO: https://youtu.be/FdVuKt_iuSI?t=1013
+
+da si uklonim problem sa ne završavanjem navodnika, vjerojatno mi je označeno: insert selected suggestion... ili smart type compoletion ili editor, general, smartkeys
+In the Settings/Preferences dialog (Ctrl+Alt+S), select Editor | General | Code Completion.

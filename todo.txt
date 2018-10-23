@@ -1,6 +1,5 @@
-#TODO: https://youtu.be/-s7e_Fy6NRU?t=4
+#TODO: https://youtu.be/acOktTcTVEQ?t=1351
 
-da si uklonim problem sa ne završavanjem navodnika, vjerojatno mi je označeno: insert selected suggestion... ili smart type compoletion ili editor, general, smartkeys
-In the Settings/Preferences dialog (Ctrl+Alt+S), select Editor | General | Code Completion.
+
 
 https://github.com/CoreyMSchafer/code_snippets/tree/master/Django_Blog/snippets

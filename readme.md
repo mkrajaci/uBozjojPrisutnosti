@@ -1,4 +1,4 @@
-#Hello.  
+<h1>Hello</h1>  
 ##This is fully functional responsive django blog site in back-end.  
 ##Front-end is made with templates and Bootstrap. 
 ###I included requirements file where you can find what is required for starting.  

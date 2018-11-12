@@ -1,6 +1,6 @@
-<h1>Hello</h1>  
-##This is fully functional responsive django blog site in back-end.  
-##Front-end is made with templates and Bootstrap. 
+<h1><u>Hello happy user</h1>  
+<h2>This is fully functional responsive django blog site in back-end.  
+<h2>Front-end is made with templates and Bootstrap. 
 ###I included requirements file where you can find what is required for starting.  
 ##Here you have admin panel, blog views, users panel, and media. 
 ![Alt Text](https://media.giphy.com/media/9D3vAeZYoJr4YAYGRC/giphy.gif)  

@@ -1,5 +1,1 @@
-#TODO: https://youtu.be/-tyBEsHSv7w?t=1186
 
-
-
-https://github.com/CoreyMSchafer/code_snippets/tree/master/Django_Blog/snippets

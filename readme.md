@@ -5,6 +5,7 @@
 I included requirements file where you can find what is required for starting.
 <br>
 Here you have admin panel, blog views, users panel, and media.  
+
 ![Alt Text](https://media.giphy.com/media/9D3vAeZYoJr4YAYGRC/giphy.gif)
 
 <h3>It si fully open source so be my guest and use it.<h3>

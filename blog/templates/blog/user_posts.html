@@ -3,7 +3,7 @@
     <h1 class="">Posts by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
     {% for post in posts %}
         <article class="">
-            <img class="" src="{{ post.author.profile.image.url }}">
+            <img class="user-logo" src="{{ post.author.profile.image.url }}">
             <div class="">
                 <div class="">
                     <a class="" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>

@@ -6,66 +6,46 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
         {% if title %}
-            <title>Django Blog - {{ title }}</title>
+            <title>U Božjoj Prisutnosti - {{ title }}</title>
         {% else %}
-            <title>Django Blog</title>
+            <title>U Božjoj Prisutnosti</title>
         {% endif %}
     </head>
     <body>
-        <div class="container">
-            <nav>
-                <input type="checkbox" id="nav" class="hidden">
-                <label for="nav" class="nav-btn">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                </label>
-                <div class="logo">
-                    <a href="{% url 'blog-home' %}">BRAND</a>
-                </div>
-                <div class="nav-wrapper">
-                    <ul>
-                        <li><a href="{% url 'blog-home' %}">Home</a></li>
-                        <li><a href="{% url 'blog-about' %}">About</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
         <header>
-            <nav class="">
-                <div class="">
-                    <a class="" href="{% url 'blog-home' %}">Django Blog</a>
-                    <button class="" type="button" data-toggle="collapse" data-target="#navbarToggle"
-                            aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class=""></span>
-                    </button>
-                    <div class="" id="">
-                        <div class="">
-                            <a class="" href="{% url 'blog-home' %}">Home</a>
-                            <a class="" href="{% url 'blog-about' %}">About</a>
-                        </div>
-                        <!-- Navbar Right Side -->
-                        <div class="">
-                            {% if user.is_authenticated %}
-                                <a class="" href="{% url 'post-create' %}">New Post</a>
-                                <a class="" href="{% url 'profile' %}">Profile</a>
-                                <a class="" href="{% url 'logout' %}">Logout</a>
-                            {% else %}
-                                <a class="" href="{% url 'login' %}">Login</a>
-                                <a class="" href="{% url 'register' %}">Register</a>
-                            {% endif %}
-                        </div>
+            <div class="container">
+                <nav>
+                    <input type="checkbox" id="nav" class="hidden">
+                    <label for="nav" class="nav-btn">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </label>
+                    <div class="logo">
+                        <a href="{% url 'blog-home' %}">UBP</a>
                     </div>
-                </div>
-            </nav>
+                    <div class="nav-wrapper">
+                        <ul>
+                            <li><a href="{% url 'blog-home' %}">Home</a></li>
+                            <li><a href="{% url 'blog-about' %}">About</a></li>
+                            {% if user.is_authenticated %}
+                                    <li><a class="" href="{% url 'post-create' %}">New Post</a></li>
+                                    <li><a class="" href="{% url 'profile' %}">Profile</a></li>
+                                    <li><a class="" href="{% url 'logout' %}">Logout</a></li>
+                                    <li><a class="" href="{% url 'login' %}">Login</a></li>
+                                    <li><a class="" href="{% url 'register' %}">Register</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </header>
-        <main role="main" class="">
-            <div class="">
-                <div class="">      <!-- sve poruke će se na ovom mjestu pokazivati -->
+        <main role="main" class="row">
+            <div class="leftcolumn">
+                <div class="card">      <!-- sve poruke će se na ovom mjestu pokazivati -->
                     {% if messages %}
                         {% for message in messages %}
                             <div class="">
@@ -75,8 +55,8 @@
                     {% endif %}
                     {% block content %}{% endblock %}
                 </div>
-                <div class="">
-                    <div class="">
+                <div class="rightcolumn">
+                    <div class="card">
                         <h3>Our Sidebar</h3>
                         <p class="">You can put any information here you'd like.
                             <ul class="">

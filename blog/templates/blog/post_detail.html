@@ -1,7 +1,7 @@
 {% extends "blog/base.html" %}
 {% block content %}
     <article class="">
-        <img class="" src="{{ object.author.profile.image.url }}">
+        <img class="user-logo" src="{{ object.author.profile.image.url }}">
         <div class="">
             <div class="">
                 <a class="" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>

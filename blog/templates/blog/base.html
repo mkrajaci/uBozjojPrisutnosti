@@ -6,6 +6,9 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
         {% if title %}
@@ -15,7 +18,7 @@
         {% endif %}
     </head>
     <body>
-        <header>
+        <header class="site-header">
             <div class="container">
                 <nav>
                     <input type="checkbox" id="nav" class="hidden">
@@ -43,32 +46,44 @@
                 </nav>
             </div>
         </header>
-        <main role="main" class="row">
-            <div class="leftcolumn">
-                <div class="card">      <!-- sve poruke će se na ovom mjestu pokazivati -->
+        <main role="main" class="container">
+            <div class="row">
+                <div class="col-md-8">      <!-- sve poruke će se na ovom mjestu pokazivati -->
                     {% if messages %}
                         {% for message in messages %}
-                            <div class="">
+                            <div class="alert alert-{{ message.tags }}">    <!-- porukama se može dinamički mijenjati stil pomoću ovog message.tag jer ih bootstrap ima predefinirane -->
                                 {{ message }}
                             </div>
                         {% endfor %}
                     {% endif %}
                     {% block content %}{% endblock %}
                 </div>
-                <div class="rightcolumn">
-                    <div class="card">
+                <div class="col-md-4">
+                    <div class="content-section">
                         <h3>Our Sidebar</h3>
-                        <p class="">You can put any information here you'd like.
-                            <ul class="">
-                                <li class="">Latest Posts</li>
-                                <li class="">Announcements</li>
-                                <li class="">Calendars</li>
-                                <li class="">etc</li>
-                            </ul>
+                        <p class='text-muted'>You can put any information here you'd like.
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-light">Latest Posts</li>
+                            <li class="list-group-item list-group-item-light">Announcements</li>
+                            <li class="list-group-item list-group-item-light">Calendars</li>
+                            <li class="list-group-item list-group-item-light">etc</li>
+                        </ul>
                         </p>
                     </div>
                 </div>
             </div>
         </main>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+                integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                crossorigin="anonymous"></script>
     </body>
 </html>
